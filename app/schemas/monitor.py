@@ -15,6 +15,7 @@ class Monitor(BaseModel):
     maxretries: int = 0
     upsideDown: bool = False
     notificationIDList: Optional[List] = None
+    parent: Optional[int] = None
 
     # HTTP JSON-QUERY
     expectedValue: Optional[str] = None

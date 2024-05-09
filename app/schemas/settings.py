@@ -33,6 +33,7 @@ class MonitorListItem(BaseModel):
     interval: Optional[int]
     retryInterval: Optional[int]
     resendInterval: Optional[int]
+    parent: Optional[int]
     keyword: Any
     expiryNotification: bool
     ignoreTls: bool
