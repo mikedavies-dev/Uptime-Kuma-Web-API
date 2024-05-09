@@ -41,6 +41,8 @@ async def get_monitor(monitor_id:int=Path(...) , cur_user: API = Depends(get_cur
 async def create_monitor(monitor: Monitor,cur_user: API = Depends(get_current_user)):
     api: UptimeKumaApi = cur_user['api']
     try:
+        print("Adding monitor")
+        print(monitor.dict())
         resp = api.add_monitor(**monitor.dict())
     except TypeError as e:
         logging.error(e)
